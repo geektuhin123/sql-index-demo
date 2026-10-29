@@ -1,0 +1,7 @@
+sqlite 3.53.1 | python 3.13.18 | rows 1000000
+result: (13, 2797.32)
+plan (no index):   ['SCAN orders']
+avg time (no index): 23.761 ms
+index build: 325 ms
+plan (with index): ['SEARCH orders USING INDEX idx_orders_customer (customer_id=?)']
+avg time (with index): 0.004 ms
